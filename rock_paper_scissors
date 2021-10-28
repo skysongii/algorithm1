@@ -1,0 +1,88 @@
+import java.util.Scanner;
+public class rock_paper_scissors {
+	
+	public static void main(String[] args) {
+		
+		
+		Scanner scan=new Scanner(System.in);
+		System.out.println("가위(1), 바위(2) 보(3) 입력 :");
+		int a = scan.nextInt();
+    
+    // 플레이어    
+		if (a==1) {
+			System.out.println("Player : 가위");
+			}
+		if (a==2) {
+			System.out.println("Player : 바위");
+			}
+		if (a==3) {
+			System.out.println("Player : 보");
+			}
+		
+		//컴퓨터
+		int com=(int)(Math.random()*3) + 1;
+		if(com==1)
+		{
+			System.out.println("컴퓨터 : 가위");
+		}
+		if(com==2)
+		{
+			System.out.println("컴퓨터 : 바위");
+		}
+		if(com==3)
+		{
+			System.out.println("컴퓨터 : 보");
+		}
+		
+	
+		
+		//컴퓨터:가위
+		// 문자열은 equals()로 비교
+		
+		if(com==1) 
+		{
+			if(a==1)
+			{
+				System.out.println("비겼다.");
+			}
+			if(a==2) 
+			{	
+				System.out.println("플레이어 승");
+			}
+			if(a==3) 
+			{	
+				System.out.println("컴퓨터 승");
+			}
+		}
+		
+		//컴퓨터가 바위일 때
+		if(com==2) {
+			if(a==1)
+			{
+				System.out.println("컴퓨터 승");
+			}
+			if(a==2) 
+			{	
+				System.out.println("비겼다.");
+			}
+			if(a==3) 
+			{	
+				System.out.println("플레이어 승");
+			}			
+		}
+		//컴퓨터가 보 일때
+		if(com==3) {
+			if(a==1)
+			{
+				System.out.println("플레이어 승");
+			}
+	    if(a==2) 
+			{	
+				System.out.println("컴퓨터 승");
+			}
+			if(a==3) 
+			{	
+				System.out.println("비겼다.");
+			}
+		}
+	}
